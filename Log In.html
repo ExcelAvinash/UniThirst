@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>UniThirst - Log In</title>
+        <script src="cookiefunctions.js"></script>
+        <script src="Log In.js"></script>
+    </head>
+    
+    <body>
+		<!--navigation-->
+		<nav>
+			<!-- Home -->
+			<a href="Home.html">Home</a>
+			
+			<!-- Facility Search -->
+			<a href="Facility Search.html">Facility Search</a>
+
+			<!-- Cafe or Restaurant Search -->
+			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+
+			<!-- Notifications -->
+			<a href="Notifications.html">Notifications</a>
+			
+			<!-- My Account -->
+			<a href="Account.html">My Account</a>
+			
+			<!-- Help & Feedback -->
+			<a href="Help and Feedback.html">Help and Feedback</a>
+			
+		</nav>
+		
+		<nav>
+			<a>Don't Have an Account?</a>
+			<!-- Signup -->
+			<a href="Sign Up.html">Sign Up</a>
+			
+		</nav>
+		
+        <div id="divID1">
+            <h1 id="h1ID1">Log In to UniThirst</h1>
+        </div>
+		
+        <form name = "form1">
+            Username: <input type="text" name="username"><br><br>
+            Password: <input type="password" name="pswd"><br><br>
+            <input type = "button" 
+                value ="Log In" 
+                onClick="updateHeader(username, pswd)">
+        </form>
+
+    </body>
+</html>
