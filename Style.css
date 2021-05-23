@@ -5,23 +5,42 @@
 	outline: 0;
 	background: transparent; */
 	font-family: verdana;
-	font-size: 125%;
+	font-size: 100%;
 	vertical-align: baseline;
 
 }
 h1 {
 	padding: 10px;
 }
+
+nav.dropdown1 {
+	display: inline-block;
+}
+
+.dropdown2 ul{
+	display:none;
+}
+.dropdown2:hover ul{
+	display:block;
+	position:absolute;
+	text-align:left;
+
+}
+
+
 nav {
 	background-color: lightskyblue;
 	font-size: 20px;
 	text-align: center;
 	padding: 10px;
+
 }
 .subbar {
 	background-color: lightblue;
 }
-nav a {
+
+
+nav li {
 	padding-left: 10px;
 	padding-right: 10px;
 	display: inline-block;
