@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>UniThirst - Sign Up</title>
+        <script src="cookiefunctions.js"></script>
+        <script src="Sign Up.js"></script>
+		<link rel = "stylesheet" href = "style.css"/>
+    </head>
+    
+    <body>
+		<!--navigation-->
+		<nav>
+			<!-- Home -->
+			<a href="Home.html">Home</a>
+			
+			<!-- Facility Search -->
+			<a href="Facility Search.html">Facility Search</a>
+
+			<!-- Cafe or Restaurant Search -->
+			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+
+			<!-- Notifications -->
+			<a href="Notifications.html">Notifications</a>
+			
+			<!-- My Account -->
+			<a href="Account.html">My Account</a>
+			
+			<!-- Help & Feedback -->
+			<a href="Help and Feedback.html">Help and Feedback</a>
+			
+		</nav>
+		
+		<nav class="subbar">
+			<a>Already Have an Account?</a>
+			<!-- Login -->
+			<a href="Log In.html">Log In</a>
+			
+		</nav>
+		
+        <h1>Sign Up for a UniThirst account</h1>
+		
+        <form name="form1"
+        	  action="Log In.html"
+        	  onSubmit="return updatePassword(username, pswd1, pswd2)">
+
+            Username: <input type="text" name="username"><br><br>
+            Password: <input type="password" name="pswd1"><br><br>
+            Repeat Password: <input type="password" name="pswd2"><br><br>
+            <input type = "submit" value ="Sign Up"> 
+        </form>
+
+    </body>
+</html>
