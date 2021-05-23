@@ -19,29 +19,40 @@
 			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
 
 			<!-- Notifications -->
-			<a href="Notifications.html">Notifications</a>
+			<li class="dropdown"><a href="Notifications.html">Notifications</a>
+				<ul>
+					<li><a href="" class="subbar">Nearby Water Fountain Alerts</a></li>
+					<li><a href="" class="subbar">Cafe and Restaurant Recommendations</a></li>
+					<li><a href="" class="subbar">Drink Water Reminders</a></li>
+				</ul>
+			</li>
 			
 			<!-- My Account -->
-			<a href="Account.html">My Account</a>
-			
+			<li class="dropdown"><a href="Account.html">My Account</a>
+				<ul>
+					<li><a href="Log In.html" class="subbar">Log in</a></li>
+					<li><a href="Sign Up.html" class="subbar">Sign up</a></li>
+				</ul>
+			</li>
+
 			<!-- Help & Feedback -->
-			<a href="Help and Feedback.html">Help and Feedback</a>
-			
-		</nav>
-		
-		<nav class="subbar">
-			<a>Already Have an Account?</a>
-			<!-- Login -->
-			<a href="Log In.html">Log In</a>
+			<li class="dropdown"><a href="Help and Feedback.html">Help and Feedback</a>
+				<ul>
+					<li><a href="" class="subbar">Frequently Asked Questions</a></li>
+					<li><a href="" class="subbar">Provide Feedback</a></li>
+					<li><a href="" class="subbar">Report Issues</a></li>
+					<li><a href="" class="subbar">Contact Support</a></li>
+				</ul>
+			</li>
 			
 		</nav>
 		
         <h1>Sign Up for a UniThirst account</h1>
+		<a>Already Have an Account?</a>
+		<!-- Login -->
+		<a href="Log In.html">Log In</a>
 		
-        <form name="form1"
-        	  action="Log In.html"
-        	  onSubmit="return updatePassword(username, pswd1, pswd2)">
-
+        <form name="form1" action="Log In.html" onSubmit="return updatePassword(username, pswd1, pswd2)">
             Username: <input type="text" name="username"><br><br>
             Password: <input type="password" name="pswd1"><br><br>
             Repeat Password: <input type="password" name="pswd2"><br><br>

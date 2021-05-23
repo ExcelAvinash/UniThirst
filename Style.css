@@ -13,20 +13,18 @@ h1 {
 	padding: 10px;
 }
 
-nav.dropdown1 {
-	display: inline-block;
+.dropdown ul{
+	display: none;
 }
-
-.dropdown2 ul{
-	display:none;
+.dropdown:hover ul{
+	display: block;
+	position: absolute;
+	text-align: left;
+	padding-top: 20px;
 }
-.dropdown2:hover ul{
-	display:block;
-	position:absolute;
-	text-align:left;
-
+.dropdown li{
+	padding-bottom: 20px;
 }
-
 
 nav {
 	background-color: lightskyblue;
@@ -37,13 +35,25 @@ nav {
 }
 .subbar {
 	background-color: lightblue;
+	padding: 10px;
 }
 
 
 nav li {
+	display: inline-block;
+}
+a {
+	padding-left: 10px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	color: blue;
+}
+nav a {
 	padding-left: 10px;
 	padding-right: 10px;
-	display: inline-block;
 }
 nav a:link {
 	text-decoration: none;
@@ -51,6 +61,9 @@ nav a:link {
 }
 nav a:visited {
 	color: black;
+}
+nav a:hover{
+	color: #FF0000;
 }
 form {
 	font-size: 20px;
@@ -61,7 +74,4 @@ input {
 	padding: 5px;
 }
 
-/* change color of the cursor */
-nav a:hover{
-color:#FF0000;
-}
+
