@@ -7,7 +7,7 @@
 	font-family: verdana;
 	font-size: 125%;
 	vertical-align: baseline;
-	
+
 }
 h1 {
 	padding: 10px;
@@ -40,4 +40,9 @@ form {
 input {
 	font-size: 20px;
 	padding: 5px;
+}
+
+/* change color of the cursor */
+nav a:hover{
+color:#FF0000;
 }
