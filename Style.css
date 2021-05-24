@@ -11,6 +11,19 @@
 }
 h1 {
 	padding: 10px;
+	font-size: 150%;
+	text-align: center;
+}
+h2 {
+	padding: 10px;
+	font-size: 125%;
+	text-align: center;
+}
+p {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+	padding: 10px;
 }
 
 .dropdown ul{
@@ -20,30 +33,31 @@ h1 {
 	display: block;
 	position: absolute;
 	text-align: left;
-	padding-top: 20px;
+	padding-top: 10px;
 	background-color: #1995ad;
 
 }
 .dropdown li{
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 
-.SencondDropDown li{
+.SecondDropDown li{
 	display:none;
 }
-.SencondDropDown:hover li{
+.SecondDropDown:hover li{
 	display:block;
 	position:relative;
+	padding-top: 10px;
 	background-color: #4cb5f5;
 
 }
 
 nav {
-	background-color: #375e97;
+	/*other colour was too dark*/
+	background-color: lightskyblue;
 	font-size: 20px;
 	text-align: center;
 	padding: 10px;
-
 }
 
 
