@@ -21,22 +21,31 @@ h1 {
 	position: absolute;
 	text-align: left;
 	padding-top: 20px;
+	background-color: #1995ad;
+
 }
 .dropdown li{
-	padding-bottom: 20px;
+	padding-bottom: 15px;
+}
+
+.SencondDropDown li{
+	display:none;
+}
+.SencondDropDown:hover li{
+	display:block;
+	position:relative;
+	background-color: #4cb5f5;
+
 }
 
 nav {
-	background-color: lightskyblue;
+	background-color: #375e97;
 	font-size: 20px;
 	text-align: center;
 	padding: 10px;
 
 }
-.subbar {
-	background-color: lightblue;
-	padding: 10px;
-}
+
 
 
 nav li {
@@ -63,7 +72,7 @@ nav a:visited {
 	color: black;
 }
 nav a:hover{
-	color: #FF0000;
+	color: #Fa6159;
 }
 form {
 	font-size: 20px;
@@ -73,5 +82,3 @@ input {
 	font-size: 20px;
 	padding: 5px;
 }
-
-
