@@ -4,7 +4,31 @@
 		<title> UniThirst - Notifs </title>
 		<link rel = "stylesheet" href = "style.css"/>
 	</head>
+	<style>
+		.notifications p, .notifications h2, .notifications button, .notifications, .notifications li{
+			text-align: left;
+			margin-left: 10%;	
+			
+		}
 
+		.timer p{
+			font-size: 150%;
+			padding-left: 5%;
+		}
+		
+
+		.notifications button{
+			padding: 10px;
+			margin-bottom: 1%;
+			
+		}
+
+
+		.notifications li{
+			list-style-type: none;
+			padding-bottom: 1%;		
+		}
+	</style>
 	<body>
 		<!--navigation-->
 		<nav>
@@ -50,8 +74,131 @@
 				</ul>
 			</li>
 		</nav>
-
+		
+		
 		<h1>Notifications</h1>
+		<div class="notifications">
+			<h2>Nearby Water Fountain Alert</h2>
+			<ul id = "fountain_msg">
+				<p>We have found this nearby water fountain:<p></p>
+				<li><a href="https://www.google.com/search?q=some+water+fountain&oq=some+water+fountain&aqs=chrome..69i57j0i22i30l4.13797j1j7&sourceid=chrome&ie=UTF-8">Water Fountain (20m)</a></li>
+			</ul>
+			<button onclick="turnOffFountain()" id="fountain_btn">Turn off Water Founatain alert<br></button>
+			<h2>Cafe and Restaurant Recommendation</h2>
+			<ul id = "cafe_msg">
+				<p>We recommend this nearby cafe:<p></p>
+				<li><a href="https://www.google.com/search?q=some+restaurant&oq=some+restu&aqs=chrome.1.69i57j0i10l3j0i10i457j0i10l2j0i10i395l3.5388j1j7&sourceid=chrome&ie=UTF-8">Restaurant (70m)</a></li>
+			</ul>
+			<button onclick="turnOffCafe()" id="cafe_btn">Turn off Recommendations<br></button>
+			<h2>Drink Water Reminder</h2>
+			<p id="drink_msg">Time until next suggested drink:</p>
+			<div class="timer">
+				<p id="timer"></p>
+			</div>
+			<button onclick="resetTimer()" id = reset_btn>I had some water</button>
+			<br>
+			<button onclick="turnOffDrink()" id="drink_btn">Turn off Drink reminder<br></button>
+			<br>
+			<button onclick="turnOffAllNotif()" id="notif_btn">Turn off all Notifications<br></button>
+			
+		</div>
+		<script>
+
+			var time = 61;
+			var drinkNotif = true;
+			var cafeNotif = true;
+			var fountainNotif = true;
+			var allNotif = true;
+			var timer;
+			createTimer();
+
+			function turnOffAllNotif(){
+				if (allNotif){
+					document.getElementById("notif_btn").innerHTML = "Turn on all Notifications";
+					allNotif = false;
+				} else {
+					document.getElementById("notif_btn").innerHTML = "Turn off all Notifications";
+					allNotif = true;
+				}
+				turnOffCafe();
+				turnOffDrink();
+				turnOffFountain();
+			}
+
+			function turnOffFountain(){
+				if (fountainNotif){
+					document.getElementById("fountain_msg").style.display = "none";
+					document.getElementById("fountain_btn").innerHTML = "Turn on Water Founatain alert";
+					fountainNotif = false;
+				} else {
+					document.getElementById("fountain_msg").style.display = "block";
+					document.getElementById("fountain_btn").innerHTML = "Turn off Water Founatain alert";
+					fountainNotif = true;
+				}
+				
+			}
+
+			function turnOffCafe(){
+				if (cafeNotif){
+					document.getElementById("cafe_msg").style.display = "none";
+					document.getElementById("cafe_btn").innerHTML = "Turn on Recommendations";
+					cafeNotif = false;
+				} else {
+					document.getElementById("cafe_msg").style.display = "block";
+					document.getElementById("cafe_btn").innerHTML = "Turn off Recommendations";
+					cafeNotif = true;
+				}
+				
+			}
+
+			function createTimer(){
+				timer = setInterval(function() {				
+
+				if (time <= 0) {
+					document.getElementById("timer").innerHTML = "We suggest you drink some water soon!";
+					document.getElementById("drink_msg").style.display = "none";
+					
+				} else {
+					time = time - 1;
+					document.getElementById("drink_msg").style.display = "inline-block";
+					document.getElementById("timer").innerHTML = time + "s ";
+					
+				}
+				
+
+				},1000);
+			}			
+
+			function resetTimer() {
+				time = 60
+				document.getElementById("drink_msg").innerHTML = "Time until next suggested drink:";
+				document.getElementById("timer").innerHTML = time + "s ";
+			}
+
+
+			function turnOffDrink(){
+				if (drinkNotif){
+					clearInterval(timer)
+					document.getElementById("reset_btn").style.display = "none";
+					document.getElementById("timer").style.display = "none";
+					document.getElementById("drink_msg").style.display = "none";
+					document.getElementById("drink_btn").innerHTML = "Turn on Drink reminder";
+					drinkNotif = false;
+				} else {
+					resetTimer()
+					createTimer()
+					document.getElementById("reset_btn").style.display = "inline-block";
+					document.getElementById("timer").style.display = "inline-block";
+					document.getElementById("drink_msg").style.display = "inline-block";
+					document.getElementById("drink_btn").innerHTML = "Turn off Drink reminder";
+					drinkNotif = true;
+				}
+				
+			}
+
+		</script>
+		
+
 	</body>
 
 	<footer>
