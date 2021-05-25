@@ -116,13 +116,35 @@
 				if (allNotif){
 					document.getElementById("notif_btn").innerHTML = "Turn on all Notifications";
 					allNotif = false;
+					if (cafeNotif){
+						turnOffCafe();
+					} 
+					if (drinkNotif){
+						turnOffDrink();
+					} 
+					if (fountainNotif){
+						turnOffFountain();
+					} 
+
+
 				} else {
 					document.getElementById("notif_btn").innerHTML = "Turn off all Notifications";
 					allNotif = true;
+
+					if (!cafeNotif){
+						turnOffCafe();
+					} 
+					if (!drinkNotif){
+						turnOffDrink();
+					} 
+					if (!fountainNotif){
+						turnOffFountain();
+					} 
 				}
-				turnOffCafe();
-				turnOffDrink();
-				turnOffFountain();
+				
+				
+				
+				
 			}
 
 			function turnOffFountain(){
