@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> UniThirst - Settings </title>
+		<link rel = "stylesheet" href = "style.css"/>
+	</head>
+	<style>
+		form {
+			font-size: 15px;
+			padding: 10px;
+			text-align: center;
+		}
+		input {
+			font-size: 15px;
+			padding: 5px;
+		}
+		button{
+			padding: 10px;
+			position: absolute;
+			left: 50%;
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	</style>
+
+	<body>
+		<!--navigation-->
+		<nav>
+			<!-- Home -->
+			<a href="Home.html">Home</a>
+
+			<!-- Facility Search -->
+			<a href="Facility Search.html">Facility Search</a>
+
+			<!-- Cafe or Restaurant Search -->
+			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+
+			<!-- Notifications -->
+			<li class="dropdown"><a href="Notifications.html">Notifications ﹀</a>
+				<ul>
+					<li><a href="">Nearby Water Fountain Alerts</a></li>
+					<li><a href="">Cafe and Restaurant Recommendations</a></li>
+					<li><a href="">Drink Water Reminders</a></li>
+				</ul>
+			</li>
+
+			<!-- My Account -->
+			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
+				<ul>
+					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
+						<ul>
+							<li><a href="Settings.html">Settings</a></li>
+							<li><a href="Favourites.html">View Favourites</a></li>
+						</ul>
+					</li>
+
+					<li><a href="Sign Up.html">Sign up</a></li>
+				</ul>
+			</li>
+
+			<!-- Help & Feedback -->
+			<li class="dropdown"><a href="Help and Feedback.html">Help and Feedback ﹀</a>
+				<ul>
+					<li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
+					<li><a href="Provide Feedback.html">Provide Feedback</a></li>
+					<li><a href="Report Issues.html">Report Issues</a></li>
+					<li><a href="Contact Support.html">Contact Support</a></li>
+				</ul>
+			</li>
+		</nav>
+
+		<h1>Settings</h1>
+		
+		<h2>General Settings</h2>
+		<p><b>Update Account Details:</b></p><p>
+			<form name="form1" action="" onSubmit="">
+				New Username: <input type="text" name="username"><br><br>
+				New Email: <input type="text" name="email"><br><br>
+				New Password: <input type="password" name="pswd1"><br><br>
+				Repeat Password: <input type="password" name="pswd2"><br><br>
+				<input type = "submit" value ="Update">
+			</form>
+		</p>
+		
+		<p><b>Manage Data:</b></p><p>
+			<button onclick="" id="cache_btn">Delete Cached Information<br></button><br><br><br>
+			<button onclick="" id="history_btn">Delete Search History<br></button><br><br><br>
+			<button onclick="" id="fav_btn">Delete All Favourites<br></button><br><br><br>
+			<button onclick="" id="acc_btn" style="background-color:red; color: white;">Delete Account<br></button><br><br><br>
+		</p>
+		
+		<h2>Notification Settings</h2>
+		<p><b>Nearby Fountain Alerts:</b></p><p>
+			<button onclick="" id="fountain_btn">Toggle Water Fountain Alerts<br></button><br><br><br>
+			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
+			<form name="form2" action="" onSubmit="">
+				Nearby Fountain Radius: <input type="text" name="radius"><br><br>
+				<input type = "submit" value ="Update">
+			</form>
+		</p>
+		
+		<p><b>Cafe/Restaurant Recommendations:</b></p><p>
+			<button onclick="" id="fountain_btn">Toggle Recommendations<br></button><br><br><br>
+			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
+			<form name="form3" action="" onSubmit="">
+				Nearby Cafe/Restaurant Radius: <input type="text" name="radius"><br><br>
+				<input type = "submit" value ="Update">
+			</form>
+		</p>
+		
+		<p><b>Drink Water Reminders:</b></p><p>
+			<button onclick="" id="fountain_btn">Toggle Reminders<br></button><br><br><br>
+			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
+			<form name="form4" action="" onSubmit="">
+				Time Interval: <input type="text" name="interval"><br><br>
+				Reminders Start: <input type="text" name="start"><br><br>
+				Reminders End: <input type="text" name="end"><br><br>
+				<input type = "submit" value ="Update">
+			</form>
+		</p>
+
+	</body>
+
+	<footer>
+		|<a href="Privacy policy.html">Privacy Policy</a> |<a href="Site map.html">Site Map</a> |
+	</footer>
+
+</html>

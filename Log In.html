@@ -32,8 +32,8 @@
 				<ul>
 					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
 						<ul>
-							<li><a href="">Settings</a></li>
-							<li><a href="">View Favourites</a></li>
+							<li><a href="Settings.html">Settings</a></li>
+							<li><a href="Favourites.html">View Favourites</a></li>
 						</ul>
 					</li>
 
@@ -54,18 +54,16 @@
 
     <h1>Log In to UniThirst</h1>
     <div class='box'>
-          <h1 class='heading'>Log In</h1>
+        <h1 class='heading'>Log In</h1>
+		<h1 id='h1ID1'></h1>
   		<a>Don't Have an Account?</a>
   		<!-- Signup -->
   		<a href="Sign Up.html">Sign Up</a>
-
-          <form name = "form1">
-              Username: <input type="text" name="username"><br><br>
-              Password: <input type="password" name="pswd"><br><br>
-              <input type = "button"
-                  value ="Log In"
-                  onClick="updateHeader(username, pswd)">
-          </form>
+		<form name = "form1">
+			Username or Email: <input type="text" name="username"><br><br>
+			Password: <input type="password" name="pswd"><br><br>
+			<input type = "button" value ="Log In" onClick="updateHeader(username, pswd)">
+		</form>
       </div>
     </body>
 

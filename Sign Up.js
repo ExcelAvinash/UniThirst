@@ -3,19 +3,28 @@
  * For example, if name is "John", then the key is "John_password".
  * The name and passwords are reset to empty string once successful.
  */
-function updatePassword(username,pswd1,pswd2)
+function updatePassword(username,email,pswd1,pswd2)
 {
     // check password
     secret1 = pswd1.value;
     secret2 = pswd2.value;
     
+	if(username.value.length<3)
+    {
+        alert("username needs 3 characters or more");
+        return false;
+    }
+	
     if(pswdOK(secret1, secret2))
     {   
         // store user name and password
         var key = username.value + "_password";
+		var key2 = email.value + "_password";
         localStorage.setItem(key, secret1);
+		localStorage.setItem(key2, secret1);
 
         username.value ="";
+		email.value ="";
         
         return true;
     }

@@ -7,6 +7,12 @@ function updateHeader(username, pswd)
     secret = pswd.value;
     user = username.value;
     
+	if(user.length<3)
+    {
+        alert("username needs 3 characters or more");
+        return;
+    }
+	
     if(pswdOK(user, secret))
     {
 	    pswd.value="";

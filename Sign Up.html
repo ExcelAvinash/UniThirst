@@ -32,8 +32,8 @@
 				<ul>
 					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
 						<ul>
-							<li><a href="">Settings</a></li>
-							<li><a href="">View Favourites</a></li>
+							<li><a href="Settings.html">Settings</a></li>
+							<li><a href="Favourites.html">View Favourites</a></li>
 						</ul>
 					</li>
 
@@ -54,17 +54,17 @@
 
     <h1>Sign Up for a UniThirst account</h1>
     <div class='box'>
-          <h1 class='heading'>Sign Up</h1>
+        <h1 class='heading'>Sign Up</h1>
   		<a>Already Have an Account?</a>
   		<!-- Login -->
   		<a href="Log In.html">Log In</a>
-
-          <form name="form1" action="Log In.html" onSubmit="return updatePassword(username, pswd1, pswd2)">
-              Username: <input type="text" name="username"><br><br>
-              Password: <input type="password" name="pswd1"><br><br>
-              Repeat Password: <input type="password" name="pswd2"><br><br>
-              <input type = "submit" value ="Sign Up">
-          </form>
+		<form name="form1" action="Log In.html" onSubmit="return updatePassword(username, email, pswd1, pswd2)">
+			Username: <input type="text" name="username"><br><br>
+			Email: <input type="text" name="email"><br><br>
+			Password: <input type="password" name="pswd1"><br><br>
+			Repeat Password: <input type="password" name="pswd2"><br><br>
+			<input type = "submit" value ="Sign Up">
+		</form>
     </div>
     </body>
 
