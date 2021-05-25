@@ -7,26 +7,26 @@
 	<style>
 		.notifications p, .notifications h2, .notifications button, .notifications, .notifications li{
 			text-align: left;
-			margin-left: 10%;	
-			
+			margin-left: 10%;
+
 		}
 
 		.timer p{
 			font-size: 150%;
 			padding-left: 5%;
 		}
-		
+
 
 		.notifications button{
 			padding: 10px;
 			margin-bottom: 1%;
-			
+
 		}
 
 
 		.notifications li{
 			list-style-type: none;
-			padding-bottom: 1%;		
+			padding-bottom: 1%;
 		}
 	</style>
 	<body>
@@ -74,8 +74,8 @@
 				</ul>
 			</li>
 		</nav>
-		
-		
+
+
 		<h1>Notifications</h1>
 		<div class="notifications">
 			<h2>Nearby Water Fountain Alert</h2>
@@ -100,7 +100,7 @@
 			<button onclick="turnOffDrink()" id="drink_btn">Turn off Drink reminder<br></button>
 			<br>
 			<button onclick="turnOffAllNotif()" id="notif_btn">Turn off all Notifications<br></button>
-			
+
 		</div>
 		<script>
 
@@ -118,13 +118,13 @@
 					allNotif = false;
 					if (cafeNotif){
 						turnOffCafe();
-					} 
+					}
 					if (drinkNotif){
 						turnOffDrink();
-					} 
+					}
 					if (fountainNotif){
 						turnOffFountain();
-					} 
+					}
 
 
 				} else {
@@ -133,18 +133,18 @@
 
 					if (!cafeNotif){
 						turnOffCafe();
-					} 
+					}
 					if (!drinkNotif){
 						turnOffDrink();
-					} 
+					}
 					if (!fountainNotif){
 						turnOffFountain();
-					} 
+					}
 				}
-				
-				
-				
-				
+
+
+
+
 			}
 
 			function turnOffFountain(){
@@ -157,7 +157,7 @@
 					document.getElementById("fountain_btn").innerHTML = "Turn off Water Founatain alert";
 					fountainNotif = true;
 				}
-				
+
 			}
 
 			function turnOffCafe(){
@@ -170,26 +170,26 @@
 					document.getElementById("cafe_btn").innerHTML = "Turn off Recommendations";
 					cafeNotif = true;
 				}
-				
+
 			}
 
 			function createTimer(){
-				timer = setInterval(function() {				
+				timer = setInterval(function() {
 
 				if (time <= 0) {
 					document.getElementById("timer").innerHTML = "We suggest you drink some water soon!";
 					document.getElementById("drink_msg").style.display = "none";
-					
+
 				} else {
 					time = time - 1;
 					document.getElementById("drink_msg").style.display = "inline-block";
 					document.getElementById("timer").innerHTML = time + "s ";
-					
+
 				}
-				
+
 
 				},1000);
-			}			
+			}
 
 			function resetTimer() {
 				time = 60
@@ -215,16 +215,16 @@
 					document.getElementById("drink_btn").innerHTML = "Turn off Drink reminder";
 					drinkNotif = true;
 				}
-				
+
 			}
 
 		</script>
-		
+
 
 	</body>
 
 	<footer>
-		|<a href="">Privacy Policy</a> |<a href="">Site Map</a> |
+		|<a href="Privacy policy.html">Privacy Policy</a> |<a href="Site map.html">Site Map</a> |
 	</footer>
 
 </html>
