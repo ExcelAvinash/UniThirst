@@ -9,6 +9,13 @@
 	vertical-align: baseline;
 
 }
+html, body {
+	height: 100%;
+}
+body {
+	margin-bottom: -30px;
+}
+
 h1 {
 	padding: 10px;
 	font-size: 150%;
@@ -22,6 +29,7 @@ h2 {
 p {
 	margin-left: 50px;
 	margin-right: 50px;
+	font-size: 100%;
 	text-align: center;
 	padding: 10px;
 }
@@ -97,13 +105,23 @@ input {
 	padding: 5px;
 }
 
+/* Right now it will be very close to the top of most pages, but it will stick to the bottom once more content is added */
 footer {
-	position:absolute;
-	bottom:0px;
-	background: #4cb5f5;
-	width:100%;
-	height:3%;
+	background: lightskyblue;
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+footer a:link {
+	text-decoration: none;
+	color: black;
+}
+footer a:visited {
+	color: black;
+}
+footer a:hover{
+	color: #Fa6159;
 }
 
 /*FAQ*/
