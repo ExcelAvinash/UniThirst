@@ -104,9 +104,7 @@ input {
 	font-size: 20px;
 	padding: 5px;
 }
-.form2{
-	font-size: 50px;
-}
+
 /* Right now it will be very close to the top of most pages, but it will stick to the bottom once more content is added */
 footer {
 	background: lightskyblue;
