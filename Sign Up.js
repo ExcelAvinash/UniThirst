@@ -12,7 +12,7 @@ function updatePassword(username,email,pswd1,pswd2)
 	if(username.value.length<3)
     {
         alert("username needs 3 characters or more");
-        return false;
+        return;
     }
 	
     if(pswdOK(secret1, secret2))
@@ -25,13 +25,18 @@ function updatePassword(username,email,pswd1,pswd2)
 
         username.value ="";
 		email.value ="";
-        
-        return true;
+        var slash = document.location.href.lastIndexOf("/");
+		var link = "";
+		for (var i = 0; i < slash; i++) {
+			link += document.location.href[i];
+		}
+		document.location.href = link + "/Log In.html";
+        return;
     }
     
     pswd1.value="";
     pswd2.value="";
-    return false;
+    return;
 }
 
 

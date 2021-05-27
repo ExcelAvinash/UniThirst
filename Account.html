@@ -3,6 +3,8 @@
 	<head>
 		<title> UniThirst - Account </title>
 		<link rel = "stylesheet" href = "style.css"/>
+		<script src="cookiefunctions.js"></script>
+        <script src="Account.js"></script>
 	</head>
 
 	<body>
@@ -29,15 +31,20 @@
 			<!-- My Account -->
 			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
 				<ul>
+					<!--
 					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
 						<ul>
 							<li><a href="Settings.html">Settings</a></li>
 							<li><a href="Favourites.html">View Favourites</a></li>
 						</ul>
 					</li>
-
-					<li><a href="Sign Up.html">Sign up</a></li>
+					-->
+					<li><a href="Settings.html" id="Setting">Settings</a></li>
+					<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+					<li><a href="Log In.html" id="Log In">Log In</a></li>
+					<li><a href="Sign Up.html" id="Sign Up">Sign up</a></li>
 				</ul>
+				<script>updateAccountNav()</script>
 			</li>
 
 			<!-- Help & Feedback -->
@@ -52,21 +59,29 @@
 		</nav>
 
 		<h1>My Account</h1>
-		<p><a>Are you new?</a>
-			<!-- Signup -->
-			<a href="Sign Up.html">Sign Up</a>
-			<a>Already Have an Account?</a>
-			<!-- Login -->
-			<a href="Log In.html">Log In</a>
-		</p><br>
-		<h1>Hello, User!</h1>
-		<p><a>Access Account Settings?</a>
-			<!-- Signup -->
-			<a href="Settings.html">Modify</a>
-			<a>View your Favourites?</a>
-			<!-- Login -->
-			<a href="Favourites.html">Take Me There</a>
-		</p><br>
+		<h2 id="Greeting"></h2>
+		<div id="Logged In">
+			<p><button onClick="logOut()">Log Out</a></button>
+			<p><a>Access Account Settings?</a>
+				<!-- Signup -->
+				<a href="Settings.html">Modify</a>
+				<a>View your Favourites?</a>
+				<!-- Login -->
+				<a href="Favourites.html">Take Me There</a>
+			</p><br>
+		</div>
+		<div id="Logged Out">
+			<p><a>Are you new?</a>
+				<!-- Signup -->
+				<a href="Sign Up.html">Sign Up</a>
+				<a>Already Have an Account?</a>
+				<!-- Login -->
+				<a href="Log In.html">Log In</a>
+			</p><br>
+		</div>
+		<script>updateGreeting()</script>
+		
+		
 
 	</body>
 

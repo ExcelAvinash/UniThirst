@@ -30,15 +30,21 @@
 			<!-- My Account -->
 			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
 				<ul>
+					<!--
 					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
 						<ul>
 							<li><a href="Settings.html">Settings</a></li>
 							<li><a href="Favourites.html">View Favourites</a></li>
 						</ul>
 					</li>
-
-					<li><a href="Sign Up.html">Sign up</a></li>
+					-->
+					<li><a href="Settings.html" id="Setting">Settings</a></li>
+					<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+					<li><a href="Log In.html" id="Log In">Log In</a></li>
+					<li><a href="Sign Up.html" id="Sign Up">Sign up</a></li>
 				</ul>
+				<script src="Account.js"></script>
+				<script>updateAccountNav()</script>
 			</li>
 
 			<!-- Help & Feedback -->
@@ -52,11 +58,9 @@
 			</li>
 		</nav>
 
-    <h1>Log In to UniThirst</h1>
     <div class='box'>
-        <h1 class='heading'>Log In</h1>
-		<h1 id='h1ID1'></h1>
-  		<a>Don't Have an Account?</a>
+        <h1 class='heading'>Log In to UniThirst</h1>
+  		<br><a>Don't Have an Account?</a>
   		<!-- Signup -->
   		<a href="Sign Up.html">Sign Up</a>
 		<form name = "form1">

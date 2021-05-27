@@ -15,25 +15,25 @@ function updateHeader(username, pswd)
 	
     if(pswdOK(user, secret))
     {
-	    pswd.value="";
-    	return;
-    	
-        // prepare new H1 tag
-	    h1Text = document.createTextNode(user + " has successfully logged in");
-
-        // remove existing H1
-	    target = document.getElementById("h1ID1");
-        target.removeChild(target.firstChild);
-	    target.style.color = "red";
-	    target.style.fontStyle = "italic";
- 
-        // add new H1 tag to the webpage & reset input field
-        target.appendChild(h1Text);
+		var ls = "current_user";
+		var li = "logged_in";
+		var t = "true";
+		localStorage.setItem(li, t);
+		localStorage.setItem(ls, user);
         
-        username.value ="";
+        username.value = "";
+		var slash = document.location.href.lastIndexOf("/");
+		var link = "";
+		for (var i = 0; i < slash; i++) {
+			link += document.location.href[i];
+		}
+		document.location.href = link + "/Account.html";
+		return;
+		
     }
     
     pswd.value="";
+	return;
 }
 
 function pswdOK(user, secret)
