@@ -10,13 +10,13 @@ function updateGreeting() {
 		var target = document.getElementById("Greeting");
 		target.appendChild(name);
 		
-		document.getElementById("Logged Out").style.visibility = "hidden";
+		document.getElementById("Logged Out").style.display = "none";
 	}
 	else {
 		var name = document.createTextNode("Hello, User!");
 		var target = document.getElementById("Greeting");
 		target.appendChild(name);
-		document.getElementById("Logged In").style.visibility = "hidden";
+		document.getElementById("Logged In").style.display = "none";
 	}
 	return;
 }
@@ -26,12 +26,12 @@ function updateAccountNav() {
 	var check = localStorage.getItem(li);
 	
 	if (check == "true") {
-		document.getElementById("Log In").style.visibility = "hidden";
-		document.getElementById("Sign Up").style.visibility = "hidden";
+		document.getElementById("Log In").style.display = "none";
+		document.getElementById("Sign Up").style.display = "none";
 	}
 	else {
-		document.getElementById("Setting").style.visibility = "hidden";
-		document.getElementById("Favourite").style.visibility = "hidden";
+		document.getElementById("Setting").style.display = "none";
+		document.getElementById("Favourite").style.display = "none";
 	}
 	return;
 }

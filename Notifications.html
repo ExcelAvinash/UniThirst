@@ -53,15 +53,13 @@
 			<!-- My Account -->
 			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
 				<ul>
-					<li class="SecondDropDown"><a href="Log In.html">Log in ></a>
-						<ul>
-							<li><a href="">Settings</a></li>
-							<li><a href="">View Favourites</a></li>
-						</ul>
-					</li>
-
-					<li><a href="Sign Up.html">Sign up</a></li>
+					<li><a href="Settings.html" id="Setting">Settings</a></li>
+					<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+					<li><a href="Log In.html" id="Log In">Log In</a></li>
+					<li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
 				</ul>
+				<script src="Account.js"></script>
+				<script>updateAccountNav()</script>
 			</li>
 
 			<!-- Help & Feedback -->
@@ -83,7 +81,7 @@
 				<p>We have found this nearby water fountain:<p></p>
 				<li><a href="https://www.google.com/search?q=some+water+fountain&oq=some+water+fountain&aqs=chrome..69i57j0i22i30l4.13797j1j7&sourceid=chrome&ie=UTF-8">Water Fountain (20m)</a></li>
 			</ul>
-			<button onclick="turnOffFountain()" id="fountain_btn">Turn off Water Founatain alert<br></button>
+			<button onclick="turnOffFountain()" id="fountain_btn">Turn off Water Fountain alert<br></button>
 			<h2>Cafe and Restaurant Recommendation</h2>
 			<ul id = "cafe_msg">
 				<p>We recommend this nearby cafe:<p></p>
@@ -224,7 +222,7 @@
 	</body>
 
 	<footer>
-		|<a href="Privacy policy.html">Privacy Policy</a> |<a href="Site map.html">Site Map</a> |
+		|<a href="Privacy Policy.html">Privacy Policy</a> |<a href="Site Map.html">Site Map</a> |
 	</footer>
 
 </html>
