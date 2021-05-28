@@ -11,7 +11,12 @@ function updatePassword(username,email,pswd1,pswd2)
     
 	if(username.value.length<3)
     {
-        alert("username needs 3 characters or more");
+        alert("Username requires at least 3 characters!");
+        return;
+    }
+	if(email.value.length<3)
+    {
+        alert("Email requires at least 3 characters!");
         return;
     }
 	
@@ -20,11 +25,17 @@ function updatePassword(username,email,pswd1,pswd2)
         // store user name and password
         var key = username.value + "_password";
 		var key2 = email.value + "_password";
+		var key3 = email.value + "_username";
+		var key4 = username.value + "_email";
         localStorage.setItem(key, secret1);
 		localStorage.setItem(key2, secret1);
+		localStorage.setItem(key3, username.value);
+		localStorage.setItem(key4, email.value);
 
         username.value ="";
 		email.value ="";
+		pswd1.value="";
+		pswd2.value="";
         var slash = document.location.href.lastIndexOf("/");
 		var link = "";
 		for (var i = 0; i < slash; i++) {
@@ -49,13 +60,13 @@ function pswdOK(secret1, secret2)
 {
     if(secret1.length<3)
     {
-        alert("password needs 3 characters or more");
+        alert("Password requires at least 3 characters!");
         return false;
     }
     else
     if((secret1!=secret2))
     {
-        alert("password not the same");
+        alert("Passwords are not the same!");
         return false;
     }
     return true;

@@ -3,6 +3,7 @@
 	<head>
 		<title> UniThirst - Settings </title>
 		<link rel = "stylesheet" href = "style.css"/>
+		<script src="Settings.js"></script>
 	</head>
 	<style>
 		form {
@@ -71,51 +72,52 @@
 		
 		<h2>General Settings</h2>
 		<p><b>Update Account Details:</b></p><p>
-			<form name="form1" action="" onSubmit="">
+			<form name="form1">
 				New Username: <input type="text" name="username"><br><br>
 				New Email: <input type="text" name="email"><br><br>
 				New Password: <input type="password" name="pswd1"><br><br>
 				Repeat Password: <input type="password" name="pswd2"><br><br>
-				<input type = "submit" value ="Update">
+				<input type = "button" value ="Update" onClick="updateDetails(username, email, pswd1, pswd2)">
 			</form>
 		</p>
 		
 		<p><b>Manage Data:</b></p><p>
-			<button onclick="" id="cache_btn">Delete Cached Information<br></button><br><br><br>
+			<button onclick="deleteCache(false)" id="cache_btn">Delete Cached Information<br></button><br><br><br>
 			<button onclick="" id="history_btn">Delete Search History<br></button><br><br><br>
 			<button onclick="" id="fav_btn">Delete All Favourites<br></button><br><br><br>
-			<button onclick="" id="acc_btn" style="background-color:red; color: white;">Delete Account<br></button><br><br><br>
+			<button onclick="deleteAccount()" id="acc_btn" style="background-color:red; color: white;">Delete Account<br></button><br><br><br>
 		</p>
 		
 		<h2>Notification Settings</h2>
 		<p><b>Nearby Fountain Alerts:</b></p><p>
-			<button onclick="" id="fountain_btn">Toggle Water Fountain Alerts<br></button><br><br><br>
-			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
-			<form name="form2" action="" onSubmit="">
+			<button onclick="toggleAlerts()" id="fountain_btn">Turn Off Water Fountain Alerts<br></button><br><br><br>
+			<button onclick="alertType()" id="ftn_type_btn">Notification Type: Message<br></button><br><br><br>
+			<form name="form2">
 				Nearby Fountain Radius: <input type="text" name="radius"><br><br>
-				<input type = "submit" value ="Update">
+				<input type = "button" value ="Update">
 			</form>
 		</p>
 		
 		<p><b>Cafe/Restaurant Recommendations:</b></p><p>
-			<button onclick="" id="fountain_btn">Toggle Recommendations<br></button><br><br><br>
-			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
-			<form name="form3" action="" onSubmit="">
+			<button onclick="toggleRecommendations()" id="recommend_btn">Turn Off Recommendations<br></button><br><br><br>
+			<button onclick="recommendationType()" id="rec_type_btn">Notification Type: Message<br></button><br><br><br>
+			<form name="form3">
 				Nearby Cafe/Restaurant Radius: <input type="text" name="radius"><br><br>
-				<input type = "submit" value ="Update">
+				<input type = "button" value ="Update">
 			</form>
 		</p>
 		
 		<p><b>Drink Water Reminders:</b></p><p>
-			<button onclick="" id="fountain_btn">Toggle Reminders<br></button><br><br><br>
-			<button onclick="" id="ftn_type_btn">Notification Type: Vibrate<br></button><br><br><br>
-			<form name="form4" action="" onSubmit="">
+			<button onclick="toggleReminders()" id="reminder_btn">Turn Off Reminders<br></button><br><br><br>
+			<button onclick="reminderType()" id="rem_type_btn">Notification Type: Message<br></button><br><br><br>
+			<form name="form4">
 				Time Interval: <input type="text" name="interval"><br><br>
 				Reminders Start: <input type="text" name="start"><br><br>
 				Reminders End: <input type="text" name="end"><br><br>
-				<input type = "submit" value ="Update">
+				<input type = "button" value ="Update">
 			</form>
 		</p>
+		<script>firstUpdate()</script>
 
 	</body>
 

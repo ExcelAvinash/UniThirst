@@ -9,19 +9,29 @@ function updateHeader(username, pswd)
     
 	if(user.length<3)
     {
-        alert("username needs 3 characters or more");
+        alert("Username requires at least 3 characters!");
         return;
     }
 	
     if(pswdOK(user, secret))
     {
+		var un = user + "_username";
+		var test = localStorage.getItem(un);
 		var ls = "current_user";
+		if (test != null) {
+			localStorage.setItem(ls, test);
+		}
+		else {
+			localStorage.setItem(ls, user);
+		}
+		
 		var li = "logged_in";
 		var t = "true";
 		localStorage.setItem(li, t);
-		localStorage.setItem(ls, user);
+		
         
         username.value = "";
+		pswd.value="";
 		var slash = document.location.href.lastIndexOf("/");
 		var link = "";
 		for (var i = 0; i < slash; i++) {
@@ -40,7 +50,7 @@ function pswdOK(user, secret)
 {
     if(secret.length<3)
     {
-        alert("password needs 3 characters or more");
+        alert("Password requires at least 3 characters!");
         return false;
     }
     else
@@ -49,7 +59,7 @@ function pswdOK(user, secret)
         var storePswd = localStorage.getItem(key);
         if(secret != storePswd)
         {
-            alert("password incorrect");
+            alert("Passwords are not the same!");
             return false;
         }
     }
