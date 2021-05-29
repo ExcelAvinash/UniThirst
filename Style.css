@@ -157,3 +157,19 @@ details {
 	margin-left: 100px;
 	margin-right: 100px;
 }
+
+.NoDropDown{
+	text-align: left;
+	padding: 10px;
+	background: #A6D9F2;
+	width:22.7%;
+}
+
+
+.WithDropDown{
+	display: inline-block;
+	text-align: left;
+	padding: 10px;
+	background: #A6D9F2;
+
+}
