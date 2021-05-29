@@ -277,7 +277,7 @@ function updateDetails(username,email,pswd1,pswd2)
 		localStorage.setItem(key2, secret1);
 		localStorage.setItem(key3, username.value);
 		localStorage.setItem(key4, email.value);
-		localStorage.setItem(ls, username.value);
+		localStorage.setItem("current_user", username.value);
 
         username.value ="";
 		email.value ="";

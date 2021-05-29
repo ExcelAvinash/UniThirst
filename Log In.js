@@ -56,7 +56,7 @@ function pswdOK(user, secret)
         var storePswd = localStorage.getItem(key);
         if(secret != storePswd)
         {
-            alert("Passwords are not the same!");
+            alert("Password incorrect!");
             return false;
         }
     }

@@ -96,29 +96,6 @@ function turnOffDrink(){
 
 }
 
-function updateGreeting() {
-	var li = "logged_in";
-	var check = localStorage.getItem(li);
-	
-	if (check == "true") {
-		var ls = "current_user";
-		var user = localStorage.getItem(ls);
-		
-		var name = document.createTextNode("Hello, " + user + "!");
-		var target = document.getElementById("Greeting");
-		target.appendChild(name);
-		
-		document.getElementById("Logged Out").style.display = "none";
-	}
-	else {
-		var name = document.createTextNode("Hello, User!");
-		var target = document.getElementById("Greeting");
-		target.appendChild(name);
-		document.getElementById("Logged In").style.display = "none";
-	}
-	return;
-}
-
 function firstUpdate() {
 	var check = localStorage.getItem("logged_in");
 	
