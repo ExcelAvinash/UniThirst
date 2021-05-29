@@ -42,7 +42,6 @@ p {
 	font-size: 17px;
 	position: absolute;
 	min-width: 90px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .menu-dropdown-content2{
@@ -51,7 +50,6 @@ p {
 	font-size: 17px;
 	position: absolute;
 	min-width: 260px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown ul{
