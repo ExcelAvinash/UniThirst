@@ -1,59 +1,192 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> UniThirst - Search (F) </title>
-		<link rel = "stylesheet" href = "style.css"/>
-	</head>
 
-	<body>
-		<!--navigation-->
-		<nav>
-			<!-- Home -->
-			<a href="Home.html">Home</a>
+<head>
+	<title> UniThirst - Search (F) </title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="" href="">
+	<style>
+		.searchbtn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
 
-			<!-- Facility Search -->
-			<a href="Facility Search.html">Facility Search</a>
 
-			<!-- Cafe or Restaurant Search -->
-			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+		.dropdownbtn,
+		.dropdownbtn2 {
+			background-color: #4CAF50;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
 
-			<!-- Notifications -->
-			<a href="Notifications.html">Notifications</a>
+		.dropdown-content,
+		.dropdown-content2 {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 135px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			text-align: left;
+		}
 
-			<!-- My Account -->
-			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
-				<div class="menu-dropdown-content1">
-					<ul>
-						<li><a href="Settings.html" id="Setting">Settings</a></li>
-						<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
-					</ul>
-					<ul>
-						<li><a href="Log In.html" id="Log In">Log In</a></li>
-						<li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
-					</ul>
-				</div>
-				<script src="Account.js"></script>
-				<script>updateAccountNav()</script>
-			</li>
+		.dropdown-content2 {
+			min-width: 260px;
+		}
 
-			<!-- Help & Feedback -->
-			<li class="dropdown"><a href="Help and Feedback.html">Help and Feedback ﹀</a>
-				<div class="menu-dropdown-content2">
-					<ul>
-						<li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
-						<li><a href="Provide Feedback.html">Provide Feedback</a></li>
-						<li><a href="Report Issues.html">Report Issues</a></li>
-						<li><a href="Contact Support.html">Contact Support</a></li>
-					</ul>
-				</div>
-			</li>
-		</nav>
+		.dropdown-content a,
+		.dropdown-content2 a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
 
-		<h1>Facility Search</h1>
-	</body>
+		.dropdown-content a:hover,
+		.dropdown-content2 a:hover {
+			background-color: #f1f1f1
+		}
 
-	<footer>
-		|<a href="Privacy Policy.html">Privacy Policy</a> |<a href="Site Map.html">Site Map</a> |<a href="About Us.html">About Us</a> |
-	</footer>
+		.dropdown:hover .dropdown-content,
+		.dropdown2:hover .dropdown-content2 {
+			display: block;
+		}
+
+		.dropdown:hover .dropdownbtn,
+		.dropdown2:hover .dropdownbtn2,
+		.search:hover .searchbtn {
+			background-color: #3e8e41;
+		}
+
+		.tool-bar {
+			text-align: center;
+		}
+
+		.facility-list {
+			padding: 20px;
+		}
+
+		.facility-list li {
+			padding: 16px;
+			text-align: center;
+			font-size: 18px;
+			list-style-type: none;
+		}
+	</style>
+
+	<script src="search.js"></script>
+</head>
+
+<body>
+	<!--navigation-->
+	<nav>
+		<!-- Home -->
+		<a href="Home.html">Home</a>
+
+		<!-- Facility Search -->
+		<a href="Facility Search.html">Facility Search</a>
+
+		<!-- Cafe or Restaurant Search -->
+		<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+
+		<!-- Notifications -->
+		<li class="dropdown"><a href="Notifications.html">Notifications</a>
+			<!-- <div class="menu-dropdown-content1">
+				<ul>
+					<li><a href="">Nearby Water Fountain Alerts</a></li>
+					<li><a href="">Cafe and Restaurant Recommendations</a></li>
+					<li><a href="">Drink Water Reminders</a></li>
+				</ul>
+			</div> -->
+		</li>
+
+		<!-- My Account -->
+		<li class="dropdown"><a href="Account.html">My Account ﹀</a>
+			<div class="menu-dropdown-content2">
+				<ul>
+					<li><a href="Settings.html" id="Setting">Settings</a></li>
+					<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+					<li><a href="Log In.html" id="Log In">Log In</a></li>
+					<li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
+				</ul>
+			</div>
+			<script src="Account.js"></script>
+			<script>updateAccountNav()</script>
+		</li>
+
+		<!-- Help & Feedback -->
+		<li class="dropdown"><a href="Help and Feedback.html">Help and Feedback ﹀</a>
+			<div class="menu-dropdown-content3">
+				<ul>
+					<li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
+					<li><a href="Provide Feedback.html">Provide Feedback</a></li>
+					<li><a href="Report Issues.html">Report Issues</a></li>
+					<li><a href="Contact Support.html">Contact Support</a></li>
+				</ul>
+			</div>
+		</li>
+	</nav>
+
+	<h1>Facility Search</h1>
+	<div class="tool-bar">
+		<!-- search -->
+		<!-- need more format -->
+		<div class="search">
+			<form onsubmit="return search()">
+				<input type="text" class="search-input" placeholder="Search Facility" id="search_input" />
+				<button class="searchbtn" onclick="return search()">search</button>
+			</form>
+		</div>
+
+		<!-- View Method -->
+		<div class="dropdown">
+			<button class="dropdownbtn">View Method</button>
+			<div class="dropdown-content">
+				<a href="">List View</a>
+				<a href="">Map View</a>
+			</div>
+		</div>
+
+		<!-- Sort -->
+		<!-- default sort by most popular -->
+		<div class="dropdown2">
+			<button class="dropdownbtn2">Sort</button>
+			<div class="dropdown-content2">
+				<a href="">Most Popular</a>
+				<a href="">A-Z</a>
+				<a href="">Z-A</a>
+				<a href="">Distance: from short to long</a>
+				<a href="">Distance: from long to short</a>
+				<a href="">Rating: from high to low</a>
+				<a href="">Rating: from low to high</a>
+			</div>
+		</div>
+
+		<div class="facility-list">
+			<ul>
+				<li><a href="Facility content - A003.html">Facility A003</a></li>
+				<li><a href="">Facility A002</a></li>
+				<li><a href="">Facility B001</a></li>
+				<li><a href="">Facility H004</a></li>
+				<li><a href="">Facility R005</a></li>
+				<li><a href="">Facility K001</a></li>
+				<li><a href="">Facility L001</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+
+<footer>
+	|<a href="Privacy Policy.html">Privacy Policy</a> |<a href="Site Map.html">Site Map</a> |<a
+		href="About Us.html">About Us</a> |
+</footer>
 
 </html>
