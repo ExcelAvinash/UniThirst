@@ -89,34 +89,37 @@
 		</p>
 		
 		<h2>Notification Settings</h2>
-		<p><b>Nearby Fountain Alerts:</b></p><p>
-			<button onclick="toggleAlerts()" id="fountain_btn">Turn Off Water Fountain Alerts<br></button><br><br><br>
-			<button onclick="alertType()" id="ftn_type_btn">Notification Type: Message<br></button><br><br><br>
-			<form name="form2">
-				Nearby Fountain Radius: <input type="text" name="radius"><br><br>
-				<input type = "button" value ="Update">
-			</form>
-		</p>
-		
-		<p><b>Cafe/Restaurant Recommendations:</b></p><p>
-			<button onclick="toggleRecommendations()" id="recommend_btn">Turn Off Recommendations<br></button><br><br><br>
-			<button onclick="recommendationType()" id="rec_type_btn">Notification Type: Message<br></button><br><br><br>
-			<form name="form3">
-				Nearby Cafe/Restaurant Radius: <input type="text" name="radius"><br><br>
-				<input type = "button" value ="Update">
-			</form>
-		</p>
-		
-		<p><b>Drink Water Reminders:</b></p><p>
-			<button onclick="toggleReminders()" id="reminder_btn">Turn Off Reminders<br></button><br><br><br>
-			<button onclick="reminderType()" id="rem_type_btn">Notification Type: Message<br></button><br><br><br>
-			<form name="form4">
-				Time Interval: <input type="text" name="interval"><br><br>
-				Reminders Start: <input type="text" name="start"><br><br>
-				Reminders End: <input type="text" name="end"><br><br>
-				<input type = "button" value ="Update">
-			</form>
-		</p>
+		<button onclick="toggleNotifs()" id="notification_btn">Turn Off Notifications<br></button><br><br><br>
+		<div id="Notifications">
+			<p><b>Nearby Fountain Alerts:</b></p><p>
+				<button onclick="toggleAlerts()" id="fountain_btn">Turn Off Alerts<br></button><br><br><br>
+				<button onclick="alertType()" id="ftn_type_btn">Notification Type: Message<br></button><br><br><br>
+				<form name="form2" id="ftn_radius">
+					Nearby Fountain Radius: <input type="text" name="radius"><br><br>
+					<input type = "button" value ="Update">
+				</form>
+			</p>
+			
+			<p><b>Cafe/Restaurant Recommendations:</b></p><p>
+				<button onclick="toggleRecommendations()" id="recommend_btn">Turn Off Recommendations<br></button><br><br><br>
+				<button onclick="recommendationType()" id="rec_type_btn">Notification Type: Message<br></button><br><br><br>
+				<form name="form3" id="rec_radius">
+					Nearby Cafe/Restaurant Radius: <input type="text" name="radius"><br><br>
+					<input type = "button" value ="Update">
+				</form>
+			</p>
+			
+			<p><b>Drink Water Reminders:</b></p><p>
+				<button onclick="toggleReminders()" id="reminder_btn">Turn Off Reminders<br></button><br><br><br>
+				<button onclick="reminderType()" id="rem_type_btn">Notification Type: Message<br></button><br><br><br>
+				<form name="form4"  id="rem_times">
+					Time Interval: <input type="text" name="interval"><br><br>
+					Reminders Start: <input type="text" name="start"><br><br>
+					Reminders End: <input type="text" name="end"><br><br>
+					<input type = "button" value ="Update">
+				</form>
+			</p>
+		</div>
 		<script>firstUpdate()</script>
 
 	</body>

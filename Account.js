@@ -1,10 +1,8 @@
 function updateGreeting() {
-	var li = "logged_in";
-	var check = localStorage.getItem(li);
+	var check = localStorage.getItem("logged_in");
 	
 	if (check == "true") {
-		var ls = "current_user";
-		var user = localStorage.getItem(ls);
+		var user = localStorage.getItem("current_user");
 		
 		var name = document.createTextNode("Hello, " + user + "!");
 		var target = document.getElementById("Greeting");
@@ -22,8 +20,7 @@ function updateGreeting() {
 }
 
 function updateAccountNav() {
-	var li = "logged_in";
-	var check = localStorage.getItem(li);
+	var check = localStorage.getItem("logged_in");
 	
 	if (check == "true") {
 		document.getElementById("Log In").style.display = "none";
@@ -37,8 +34,6 @@ function updateAccountNav() {
 }
 
 function logOut() {
-	var li = "logged_in";
-	var f = "false"
-	localStorage.setItem(li, f);
+	localStorage.setItem("logged_in", "false");
 	location.reload();
 }

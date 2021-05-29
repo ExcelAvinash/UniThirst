@@ -1,96 +1,121 @@
-function toggleReminders() {
-	var r = "reminders";
-	var val = localStorage.getItem(r);
+function toggleNotifs() {
+	var val = localStorage.getItem("notifications");
 	if (val == "false") {
-		localStorage.setItem(r, "true");
-		document.getElementById("reminder_btn").innerHTML = "Turn Off Reminders";
+		localStorage.setItem("notifications", "true");
+		document.getElementById("notification_btn").innerHTML = "Turn Off Notifications";
+		document.getElementById("Notifications").style.display = "inline";
 	}
 	else {
-		localStorage.setItem(r, "false");
+		localStorage.setItem("notifications", "false");
+		document.getElementById("notification_btn").innerHTML = "Turn On Notifications";
+		document.getElementById("Notifications").style.display = "none";
+	}
+}
+
+function toggleReminders() {
+	var val = localStorage.getItem("reminders");
+	if (val == "false") {
+		localStorage.setItem("reminders", "true");
+		document.getElementById("reminder_btn").innerHTML = "Turn Off Reminders";
+		document.getElementById("rem_type_btn").style.display = "inline";
+		document.getElementById("rem_times").style.display = "block";
+	}
+	else {
+		localStorage.setItem("reminders", "false");
 		document.getElementById("reminder_btn").innerHTML = "Turn On Reminders";
+		document.getElementById("rem_type_btn").style.display = "none";
+		document.getElementById("rem_times").style.display = "none";
 	}
 }
 
 function toggleAlerts() {
-	var a = "alerts";
-	var val = localStorage.getItem(a);
+	var val = localStorage.getItem("alerts");
 	if (val == "false") {
-		localStorage.setItem(a, "true");
+		localStorage.setItem("alerts", "true");
 		document.getElementById("fountain_btn").innerHTML = "Turn Off Alerts";
+		document.getElementById("ftn_type_btn").style.display = "inline";
+		document.getElementById("ftn_radius").style.display = "block";
 	}
 	else {
-		localStorage.setItem(a, "false");
+		localStorage.setItem("alerts", "false");
 		document.getElementById("fountain_btn").innerHTML = "Turn On Alerts";
+		document.getElementById("ftn_type_btn").style.display = "none";
+		document.getElementById("ftn_radius").style.display = "none";
 	}
 }
 
 function toggleRecommendations() {
-	var r = "recommendations";
-	var val = localStorage.getItem(r);
+	var val = localStorage.getItem("recommendations");
 	if (val == "false") {
-		localStorage.setItem(r, "true");
+		localStorage.setItem("recommendations", "true");
 		document.getElementById("recommend_btn").innerHTML = "Turn Off Recommendations";
+		document.getElementById("rec_type_btn").style.display = "inline";
+		document.getElementById("rec_radius").style.display = "block";
 	}
 	else {
-		localStorage.setItem(r, "false");
+		localStorage.setItem("recommendations", "false");
 		document.getElementById("recommend_btn").innerHTML = "Turn On Recommendations";
+		document.getElementById("rec_type_btn").style.display = "none";
+		document.getElementById("rec_radius").style.display = "none";
 	}
 }
 
 function reminderType() {
-	var r = "remNotif";
-	var val = localStorage.getItem(r);
+	var val = localStorage.getItem("remNotif");
 	if (val == "message") {
-		localStorage.setItem(r, "vibrate");
+		localStorage.setItem("remNotif", "vibrate");
 		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
 	else if (val == "vibrate") {
-		localStorage.setItem(r, "noise");
+		localStorage.setItem("remNotif", "noise");
 		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(r, "message");
+		localStorage.setItem("remNotif", "message");
 		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Message";
 	}
 }
 
 function alertType() {
-	var a = "alNotif";
-	var val = localStorage.getItem(a);
+	var val = localStorage.getItem("alNotif");
 	if (val == "message") {
-		localStorage.setItem(a, "vibrate");
+		localStorage.setItem("alNotif", "vibrate");
 		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
 	else if (val == "vibrate") {
-		localStorage.setItem(a, "noise");
+		localStorage.setItem("alNotif", "noise");
 		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(a, "message");
+		localStorage.setItem("alNotif", "message");
 		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Message";
 	}
 }
 
 function recommendationType() {
-	var r = "recNotif";
-	var val = localStorage.getItem(r);
+	var val = localStorage.getItem("recNotif");
 	if (val == "message") {
-		localStorage.setItem(r, "vibrate");
+		localStorage.setItem("recNotif", "vibrate");
 		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
 	else if (val == "vibrate") {
-		localStorage.setItem(r, "noise");
+		localStorage.setItem("recNotif", "noise");
 		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(r, "message");
+		localStorage.setItem("recNotif", "message");
 		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Message";
 	}
 }
 
 function firstUpdate() {
-	var r = "remNotif";
-	var val = localStorage.getItem(r);
+	var valn = localStorage.getItem("notifications");
+	if (valn == "false") {
+		document.getElementById("notification_btn").innerHTML = "Turn On Notifications";
+		document.getElementById("Notifications").style.display = "none";
+	}
+	
+	var val = localStorage.getItem("remNotif");
 	if (val == "vibrate") {
 		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
@@ -98,12 +123,10 @@ function firstUpdate() {
 		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(r, "message");
-		document.getElementById("rem_type_btn").innerHTML = "Notification Type: Message";
+		localStorage.setItem("remNotif", "message");
 	}
 	
-	var rc = "recNotif";
-	var val2 = localStorage.getItem(rc);
+	var val2 = localStorage.getItem("recNotif");
 	if (val2 == "vibrate") {
 		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
@@ -111,12 +134,10 @@ function firstUpdate() {
 		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(rc, "message");
-		document.getElementById("rec_type_btn").innerHTML = "Notification Type: Message";
+		localStorage.setItem("recNotif", "message");
 	}
 	
-	var a = "alNotif";
-	var val3 = localStorage.getItem(a);
+	var val3 = localStorage.getItem("alNotif");
 	if (val3 == "vibrate") {
 		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Vibrate";
 	}
@@ -124,35 +145,28 @@ function firstUpdate() {
 		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Noise";
 	}
 	else {
-		localStorage.setItem(a, "message");
-		document.getElementById("ftn_type_btn").innerHTML = "Notification Type: Message";
+		localStorage.setItem("alNotif", "message");
 	}
 	
-	var re = "reminders";
-	var val4 = localStorage.getItem(re);
+	var val4 = localStorage.getItem("reminders");
 	if (val4 == "false") {
 		document.getElementById("reminder_btn").innerHTML = "Turn On Reminders";
-	}
-	else {
-		document.getElementById("reminder_btn").innerHTML = "Turn Off Reminders";
+		document.getElementById("rem_type_btn").style.display = "none";
+		document.getElementById("rem_times").style.display = "none";
 	}
 	
-	var al = "alerts";
-	var val5 = localStorage.getItem(al);
+	var val5 = localStorage.getItem("alerts");
 	if (val5 == "false") {
 		document.getElementById("fountain_btn").innerHTML = "Turn On Alerts";
-	}
-	else {
-		document.getElementById("fountain_btn").innerHTML = "Turn Off Alerts";
+		document.getElementById("ftn_type_btn").style.display = "none";
+		document.getElementById("ftn_radius").style.display = "none";
 	}
 	
-	var rec = "recommendations";
-	var val6 = localStorage.getItem(rec);
+	var val6 = localStorage.getItem("recommendations");
 	if (val6 == "false") {
 		document.getElementById("recommend_btn").innerHTML = "Turn On Recommendations";
-	}
-	else {
-		document.getElementById("recommend_btn").innerHTML = "Turn Off Recommendations";
+		document.getElementById("rec_type_btn").style.display = "none";
+		document.getElementById("rec_radius").style.display = "none";
 	}
 }
 
@@ -162,23 +176,15 @@ function deleteCache(bypass) {
 		con = confirm("Are you sure you want to delete cache? This will log you out and reset all settings!");
 	}
 	if (bypass || con) {
-		var li = "logged_in";
-		var f = "false"
-		localStorage.setItem(li, f);
-		var ls = "current_user";
-		localStorage.setItem(ls, "");
-		var r = "remNotif";
-		localStorage.removeItem(r);
-		var a = "alNotif";
-		localStorage.removeItem(a);
-		var re = "recNotif";
-		localStorage.removeItem(re);
-		var rm = "reminders";
-		localStorage.removeItem(rm);
-		var al = "alerts";
-		localStorage.removeItem(al);
-		var rc = "recommendations";
-		localStorage.removeItem(rc);
+		localStorage.setItem("logged_in", "false");
+		localStorage.setItem("current_user", "");
+		localStorage.removeItem("remNotif");
+		localStorage.removeItem("alNotif");
+		localStorage.removeItem("recNotif");
+		localStorage.removeItem("reminders");
+		localStorage.removeItem("alerts");
+		localStorage.removeItem("recommendations");
+		localStorage.removeItem("notifications");
 		var slash = document.location.href.lastIndexOf("/");
 		var link = "";
 		for (var i = 0; i < slash; i++) {
@@ -192,8 +198,7 @@ function deleteCache(bypass) {
 function deleteAccount() {
 	var con = confirm("Are you sure you want to delete account? All data will be lost!");
 	if (con) {
-		var ls = "current_user";
-		var user = localStorage.getItem(ls);
+		var user = localStorage.getItem("current_user");
 		var test1 = user + "_username";
 		var name = localStorage.getItem(test1);
 		var test2 = user + "_email";
@@ -241,8 +246,7 @@ function updateDetails(username,email,pswd1,pswd2)
     if(pswdOK(secret1, secret2))
     {   
         // store user name and password
-		var ls = "current_user";
-		var user = localStorage.getItem(ls);
+		var user = localStorage.getItem("current_user");
 		var test1 = user + "_username";
 		var name = localStorage.getItem(test1);
 		var test2 = user + "_email";

@@ -17,17 +17,14 @@ function updateHeader(username, pswd)
     {
 		var un = user + "_username";
 		var test = localStorage.getItem(un);
-		var ls = "current_user";
 		if (test != null) {
-			localStorage.setItem(ls, test);
+			localStorage.setItem("current_user", test);
 		}
 		else {
-			localStorage.setItem(ls, user);
+			localStorage.setItem("current_user", user);
 		}
 		
-		var li = "logged_in";
-		var t = "true";
-		localStorage.setItem(li, t);
+		localStorage.setItem("logged_in", "true");
 		
         
         username.value = "";
