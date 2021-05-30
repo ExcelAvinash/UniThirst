@@ -153,6 +153,10 @@ details {
 	background-color: #A6D9F2;
 }
 
+.box a:hover{
+	color: #E8304F;
+}
+
 .privacy{
 	margin-left: 100px;
 	margin-right: 100px;
