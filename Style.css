@@ -157,6 +157,17 @@ details {
 	color: #E8304F;
 }
 
+.box a:link {
+	text-decoration: none;
+	color: black;
+}
+.box a:visited {
+	color: black;
+}
+.box a:hover{
+	color: #E8304F;
+}
+
 .privacy{
 	margin-left: 100px;
 	margin-right: 100px;
