@@ -1,60 +1,99 @@
 <html>
-    <head>
-        <title>UniThirst - Site Map</title>
-		<link rel = "stylesheet" href = "style.css"/>
-    </head>
 
-    <body>
-		<!--navigation-->
-    <nav>
-			<!-- Home -->
-			<a href="Home.html">Home</a>
+<head>
+  <title>UniThirst - Site Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      padding: 50px 220px;
+    }
 
-			<!-- Facility Search -->
-			<a href="Facility Search.html">Facility Search</a>
+    .container h2 {
+      text-align: left;
+      color: #023e8a;
+      font-size: 20px;
+      text-decoration-line: underline;
+    }
 
-			<!-- Cafe or Restaurant Search -->
-			<a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+    .sitemap-content{
+      padding: 0px 0px 40px 0px;
+    }
 
-			<!-- Notifications -->
-			<a href="Notifications.html">Notifications</a>
+    .sitemap-content-list li{
+      list-style-type: none;
+      padding: 12px;
+    }
+    .sitemap-content-list li a{
+      color:#0096c7;
+      font-size: 17px;
+      font-weight: 550;
+    }
 
-			<!-- My Account -->
-			<li class="dropdown"><a href="Account.html">My Account ﹀</a>
-				<div class="menu-dropdown-content1">
-					<ul>
-						<li><a href="Settings.html" id="Setting">Settings</a></li>
-						<li><a href="Favourites.html" id="Favourite">Favourites</a></li>
-					</ul>
-					<ul>
-						<li><a href="Log In.html" id="Log In">Log In</a></li>
-						<li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
-					</ul>
-				</div>
-				<script src="Account.js"></script>
-				<script>updateAccountNav()</script>
-			</li>
+    .container h2:hover, .sitemap-content-list li a:hover{
+      color: #E8304F;
+    }
+  </style>
+</head>
 
-			<!-- Help & Feedback -->
-			<li class="dropdown"><a href="Help and Feedback.html">Help and Feedback ﹀</a>
-				<div class="menu-dropdown-content2">
-					<ul>
-						<li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
-						<li><a href="Provide Feedback.html">Provide Feedback</a></li>
-						<li><a href="Report Issues.html">Report Issues</a></li>
-						<li><a href="Contact Support.html">Contact Support</a></li>
-					</ul>
-				</div>
-			</li>
-		</nav>
+<body>
+  <!--navigation-->
+  <nav>
+    <!-- Home -->
+    <a href="Home.html">Home</a>
 
-    <h1 style="padding-right:3%;">Site Map | UniThirst</h1>
-    <div class='box'>
-      <h5><a href="Home.html">Home</a></title></h5>
+    <!-- Facility Search -->
+    <a href="Facility Search.html">Facility Search</a>
+
+    <!-- Cafe or Restaurant Search -->
+    <a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a>
+
+    <!-- Notifications -->
+    <a href="Notifications.html">Notifications</a>
+
+    <!-- My Account -->
+    <li class="dropdown"><a href="Account.html">My Account ﹀</a>
+      <div class="menu-dropdown-content1">
+        <ul>
+          <li><a href="Settings.html" id="Setting">Settings</a></li>
+          <li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+        </ul>
+        <ul>
+          <li><a href="Log In.html" id="Log In">Log In</a></li>
+          <li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
+        </ul>
+      </div>
+      <script src="Account.js"></script>
+      <script>updateAccountNav()</script>
+    </li>
+
+    <!-- Help & Feedback -->
+    <li class="dropdown"><a href="Help and Feedback.html">Help and Feedback ﹀</a>
+      <div class="menu-dropdown-content2">
+        <ul>
+          <li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
+          <li><a href="Provide Feedback.html">Provide Feedback</a></li>
+          <li><a href="Report Issues.html">Report Issues</a></li>
+          <li><a href="Contact Support.html">Contact Support</a></li>
+        </ul>
+      </div>
+    </li>
+  </nav>
+
+  <h1>Site Map | UniThirst</h1>
+
+
+
+  <div class="container">
+    <!-- Home -->
+    <div class="stitemap-content">
+      <h2 id="sitemap-header" href="Home.html">Home</h2>
     </div>
 
-    <div class='box'>
-      <h5><a href="Facility Search.html">Facility Search</a></h5>
+
+    <!-- Facility Search -->
+    <div class="sitemap-content">
+      <h2 id="sitemap-header" href="Facility Search.html">Facility Search</h2>
+      <ul class='sitemap-content-list'>
         <li><a href="Facility Content.html">Water Fountain A003</a></li>
         <li><a href="Facility Content.html">Water Fountain R005</a></li>
         <li><a href="Facility Content.html">Water Fountain B001</a></li>
@@ -62,9 +101,14 @@
         <li><a href="Facility Content.html">Water Fountain K001</a></li>
         <li><a href="Facility Content.html">Water Fountain L001</a></li>
         <li><a href="Facility Content.html">Water Fountain A002</a></li>
+      </ul>
     </div>
-    <div class='box'>
-      <h5><a href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a></h5>
+
+
+    <!-- Cafe and Restaurant Search -->
+    <div class="sitemap-content">
+      <h2 id="sitemap-header" href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</h2>
+      <ul class='sitemap-content-list'>
         <li><a href="Cafe and Restaurant Content.html">Cafe A008</a></li>
         <li><a href="Cafe and Restaurant Content.html">Restaurant R005</a></li>
         <li><a href="Cafe and Restaurant Content.html">Restaurant B001</a></li>
@@ -72,31 +116,47 @@
         <li><a href="Cafe and Restaurant Content.html">Cafe K001</a></li>
         <li><a href="Cafe and Restaurant Content.html">Restaurant L001</a></li>
         <li><a href="Cafe and Restaurant Content.html">Cafe A002</a></li>
+      </ul>
     </div>
 
-    <div class='box'>
-      <h5><a href="Notifications.html">Notifications</a></h5>
+
+    <!-- Notifications -->
+    <div class="sitemap-content">
+      <h2 id="sitemap-header" href="Notifications.html">Notifications</h2>
     </div>
 
-    <div class='box'>
-      <h5><a href="Account.html">My Account</a></h5>
+
+    <!-- My Account -->
+    <div class="sitemap-content">
+      <h2 id="sitemap-header" href="Account.html">My Account</h2>
+      <ul class='sitemap-content-list'>
         <li><a href="Log In.html" id="Log In">Log In</a></li>
         <li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
         <li><a href="Settings.html" id="Setting">Settings</a></li>
         <li><a href="Favourites.html" id="Favourite">Favourites</a></li>
+      </ul>
     </div>
-    <div class='box'>
-      <h5><a href="Help and Feedback.html">Help and Feedback</a></h5>
+
+    <!-- Help and Feedback -->
+    <div class="sitemap-content">
+      <h2 id="sitemap-header" href="Help and Feedback.html">Help and Feedback</h2>
+      <ul class='sitemap-content-list'>
         <li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
         <li><a href="Provide Feedback.html">Provide Feedback</a></li>
         <li><a href="Report Issues.html">Report Issues</a></li>
         <li><a href="Contact Support.html">Contact Support</a></li>
+      </ul>
+    </div>
+
+
   </div>
 
-    </body>
 
-    <footer>
-      |<a href="Privacy Policy.html">Privacy Policy</a> |<a href="Site Map.html">Site Map</a> |<a href="About Us.html">About Us</a> |
-    </footer>
+</body>
+
+<footer>
+  |<a href="Privacy Policy.html">Privacy Policy</a> |<a href="Site Map.html">Site Map</a> |<a href="About Us.html">About
+    Us</a> |
+</footer>
 
 </html>
