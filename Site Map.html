@@ -5,28 +5,37 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .container {
-      padding: 50px 220px;
+        padding-bottom: 10px;
+		text-align: center;
     }
 
     .container h2 {
-      text-align: left;
       color: #023e8a;
       font-size: 20px;
       text-decoration-line: underline;
     }
+	.container a:visited {
+		color: #023e8a;
+	}
+	.container a:hover{
+      color: #E8304F;
+    }
 
     .sitemap-content{
-      padding: 0px 0px 40px 0px;
+      padding: 0px 0px 10px 0px;
     }
 
     .sitemap-content-list li{
       list-style-type: none;
-      padding: 12px;
+      padding: 10px;
     }
-    .sitemap-content-list li a{
+    .sitemap-content-list li a {
       color:#0096c7;
       font-size: 17px;
       font-weight: 550;
+    }
+	.sitemap-content-list li a:visited {
+      color:#0096c7;
     }
 
     .container h2:hover, .sitemap-content-list li a:hover{
@@ -79,20 +88,20 @@
     </li>
   </nav>
 
-  <h1>Site Map | UniThirst</h1>
+  <h1>Site Map</h1>
 
 
 
   <div class="container">
     <!-- Home -->
     <div class="stitemap-content">
-      <a href="Home.html"><h2 id="sitemap-header">Home</h2></a>
+      <h2 id="sitemap-header"><a href="Home.html">Home</a></h2>
     </div>
 
 
     <!-- Facility Search -->
     <div class="sitemap-content">
-      <a href="Facility Search.html"><h2 id="sitemap-header" >Facility Search</h2></a>
+      <h2 id="sitemap-header" ><a href="Facility Search.html">Facility Search</a></h2>
       <ul class='sitemap-content-list'>
         <li><a href="Facility Content.html">Water Fountain A003</a></li>
         <li><a href="Facility Content.html">Water Fountain R005</a></li>
@@ -107,7 +116,7 @@
 
     <!-- Cafe and Restaurant Search -->
     <div class="sitemap-content">
-      <a  href="Cafe and Restaurant Search.html"><h2 id="sitemap-header">Cafe and Restaurant Search</h2></a>
+      <h2 id="sitemap-header"><a  href="Cafe and Restaurant Search.html">Cafe and Restaurant Search</a></h2>
       <ul class='sitemap-content-list'>
         <li><a href="Cafe and Restaurant Content.html">Cafe A008</a></li>
         <li><a href="Cafe and Restaurant Content.html">Restaurant R005</a></li>
@@ -122,13 +131,13 @@
 
     <!-- Notifications -->
     <div class="sitemap-content">
-      <a  href="Notifications.html"><h2 id="sitemap-header">Notifications</h2></a>
+      <h2 id="sitemap-header"><a  href="Notifications.html">Notifications</a></h2>
     </div>
 
 
     <!-- My Account -->
     <div class="sitemap-content">
-      <a  href="Account.html"><h2 id="sitemap-header">My Account</h2></a>
+      <h2 id="sitemap-header"><a  href="Account.html">My Account</a></h2>
       <ul class='sitemap-content-list'>
         <li><a href="Log In.html" id="Log In">Log In</a></li>
         <li><a href="Sign Up.html" id="Sign Up">Sign Up</a></li>
@@ -139,7 +148,7 @@
 
     <!-- Help and Feedback -->
     <div class="sitemap-content">
-      <a  href="Help and Feedback.html"><h2 id="sitemap-header">Help and Feedback</h2></a>
+      <h2 id="sitemap-header"><a  href="Help and Feedback.html">Help and Feedback</a></h2>
       <ul class='sitemap-content-list'>
         <li><a href="FAQ.HTML">Frequently Asked Questions</a></li>
         <li><a href="Provide Feedback.html">Provide Feedback</a></li>
